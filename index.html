@@ -50,12 +50,12 @@
         }
     </script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 flex items-center justify-center min-h-screen transition-colors duration-300">
+<body class="bg-slate-900 dark:bg-slate-900 flex items-center justify-center min-h-screen transition-colors duration-300">
 
     <div class="w-full max-w-md mx-auto p-4 md:p-6">
         <!-- Main Menu Screen -->
         <div id="main-menu" class="screen active">
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
                 <div class="w-32 h-32 mx-auto mb-4 bg-brand rounded-full flex items-center justify-center">
                     <svg class="w-20 h-20 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 9C21 7.89543 20.1046 7 19 7H17C15.8954 7 15 7.89543 15 9V15C15 16.1046 15.8954 17 17 17H19C20.1046 17 21 16.1046 21 15V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -74,7 +74,7 @@
 
         <!-- Exercise Selection Screen -->
         <div id="exercise-selection" class="screen">
-            <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
                  <div class="absolute top-4 left-4">
                     <button data-target="main-menu" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -94,7 +94,7 @@
 
         <!-- Under Desk Bike Calculator Screen -->
         <div id="bike-calculator" class="screen">
-            <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
                  <div class="absolute top-4 left-4">
                     <button data-target="exercise-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -129,7 +129,7 @@
 
         <!-- Walking Calculator Screen -->
         <div id="walking-calculator" class="screen">
-            <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
                  <div class="absolute top-4 left-4">
                     <button data-target="exercise-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -141,7 +141,7 @@
                 </div>
                 <!-- Calculation Mode Toggle -->
                 <div class="mb-6 flex justify-center border border-gray-200 dark:border-gray-700 rounded-lg p-1 bg-gray-100 dark:bg-gray-700">
-                    <button id="walk-mode-time" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium bg-white dark:bg-gray-800 text-brand dark:text-slate-300 shadow">By Time</button>
+                    <button id="walk-mode-time" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium bg-white dark:bg-slate-800 text-brand dark:text-slate-300 shadow">By Time</button>
                     <button id="walk-mode-steps" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium text-gray-500 dark:text-gray-400">By Steps</button>
                 </div>
                 <div class="space-y-6 mb-6">
@@ -264,16 +264,16 @@
             walkingStepsInput.value = '';
             calculateWalkingCalories();
             if (mode === 'time') {
-                walkModeTimeBtn.classList.add('bg-white', 'dark:bg-gray-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                walkModeTimeBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
                 walkModeTimeBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
-                walkModeStepsBtn.classList.remove('bg-white', 'dark:bg-gray-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                walkModeStepsBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
                 walkModeStepsBtn.classList.add('text-gray-500', 'dark:text-gray-400');
                 walkingTimeContainer.classList.remove('hidden');
                 walkingStepsContainer.classList.add('hidden');
             } else {
-                walkModeStepsBtn.classList.add('bg-white', 'dark:bg-gray-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                walkModeStepsBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
                 walkModeStepsBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
-                walkModeTimeBtn.classList.remove('bg-white', 'dark:bg-gray-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                walkModeTimeBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
                 walkModeTimeBtn.classList.add('text-gray-500', 'dark:text-gray-400');
                 walkingStepsContainer.classList.remove('hidden');
                 walkingTimeContainer.classList.add('hidden');
@@ -309,5 +309,4 @@
     </script>
 </body>
 </html>
-
 
