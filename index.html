@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,12 +48,6 @@
             }
           }
         }
-        // Set theme on initial load, defaulting to dark mode
-        if (localStorage.getItem('theme') === 'light') {
-          document.documentElement.classList.remove('dark')
-        } else {
-          document.documentElement.classList.add('dark')
-        }
     </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 flex items-center justify-center min-h-screen transition-colors duration-300">
@@ -82,7 +76,7 @@
         <div id="exercise-selection" class="screen">
             <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
                  <div class="absolute top-4 left-4">
-                    <button data-target="main-menu" class="nav-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg p-2.5">
+                    <button data-target="main-menu" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
@@ -102,7 +96,7 @@
         <div id="bike-calculator" class="screen">
             <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
                  <div class="absolute top-4 left-4">
-                    <button data-target="exercise-selection" class="nav-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg p-2.5">
+                    <button data-target="exercise-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
@@ -137,7 +131,7 @@
         <div id="walking-calculator" class="screen">
             <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
                  <div class="absolute top-4 left-4">
-                    <button data-target="exercise-selection" class="nav-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg p-2.5">
+                    <button data-target="exercise-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
@@ -177,13 +171,7 @@
         </div>
 
         <!-- Global Elements -->
-        <div class="flex justify-center mt-4">
-             <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
-        </div>
-        <footer class="text-center mt-4">
+        <footer class="text-center mt-8">
             <p class="text-gray-400 dark:text-gray-500 text-sm">Disclaimer: This is an estimate. Actual results may vary.</p>
         </footer>
     </div>
@@ -211,31 +199,6 @@
                 showScreen(targetId);
             });
         });
-
-        // --- Dark Mode ---
-        const themeToggleButton = document.getElementById('theme-toggle');
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-        
-        function updateThemeIcon() {
-            if (document.documentElement.classList.contains('dark')) {
-                themeToggleLightIcon.classList.remove('hidden');
-                themeToggleDarkIcon.classList.add('hidden');
-            } else {
-                themeToggleLightIcon.classList.add('hidden');
-                themeToggleDarkIcon.classList.remove('hidden');
-            }
-        }
-
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-            localStorage.setItem('theme', theme);
-            updateThemeIcon();
-        }
-
-        themeToggleButton.addEventListener('click', toggleTheme);
-        updateThemeIcon();
 
         // --- Bike Calculator ---
         const cpmDataPoints = [
@@ -346,4 +309,5 @@
     </script>
 </body>
 </html>
+
 
