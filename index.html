@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise Calculator</title>
+    <title>Health Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -52,35 +52,71 @@
 </head>
 <body class="bg-slate-900 dark:bg-slate-900 flex items-center justify-center min-h-screen transition-colors duration-300">
 
-    <div class="w-full max-w-md mx-auto p-4 md:p-6">
+    <div class="w-full max-w-lg mx-auto p-4 md:p-6">
         <!-- Main Menu Screen -->
         <div id="main-menu" class="screen active">
             <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
                 <div class="w-32 h-32 mx-auto mb-4 bg-brand rounded-full flex items-center justify-center">
-                    <svg class="w-20 h-20 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 9C21 7.89543 20.1046 7 19 7H17C15.8954 7 15 7.89543 15 9V15C15 16.1046 15.8954 17 17 17H19C20.1046 17 21 16.1046 21 15V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M3 9C3 7.89543 3.89543 7 5 7H7C8.10457 7 9 7.89543 9 9V15C9 16.1046 8.10457 17 7 17H5C3.89543 17 3 16.1046 3 15V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M15 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
                 </div>
 
-                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Exercise Calculator</h1>
-                <p class="text-gray-500 dark:text-gray-400 mt-4 mb-8">Ready to track your exercise?</p>
-                <button id="start-counting-btn" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
-                    Start Counting
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Health Hub</h1>
+                <p class="text-gray-500 dark:text-gray-400 mt-4 mb-8">Ready to track your lifestyle?</p>
+                <button id="start-btn" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
+                    Start
                 </button>
             </div>
         </div>
 
-        <!-- Exercise Selection Screen -->
-        <div id="exercise-selection" class="screen">
+        <!-- Category Selection Screen -->
+        <div id="category-selection" class="screen">
             <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
                  <div class="absolute top-4 left-4">
                     <button data-target="main-menu" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
-                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 pt-8">Select an Activity</h1>
+                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 pt-8">Select a Category</h1>
+                 <div class="space-y-4">
+                     <button data-target="weight-tools" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
+                         Weight
+                     </button>
+                     <button data-target="exercise-tools" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
+                         Exercise
+                     </button>
+                 </div>
+            </div>
+        </div>
+        
+        <!-- Weight Tools Screen -->
+        <div id="weight-tools" class="screen">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
+                 <div class="absolute top-4 left-4">
+                    <button data-target="category-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    </button>
+                 </div>
+                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 pt-8">Weight Calculators</h1>
+                 <div class="space-y-4">
+                     <button data-target="maintenance-calculator" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
+                         Weight Maintenance
+                     </button>
+                     <button data-target="goal-planner" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
+                         Target Weight
+                     </button>
+                 </div>
+            </div>
+        </div>
+
+        <!-- Exercise Tools Screen -->
+        <div id="exercise-tools" class="screen">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
+                 <div class="absolute top-4 left-4">
+                    <button data-target="category-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    </button>
+                 </div>
+                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 pt-8">Exercise Calculators</h1>
                  <div class="space-y-4">
                      <button data-target="walking-calculator" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
                          Walking
@@ -96,7 +132,7 @@
         <div id="bike-calculator" class="screen">
             <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
                  <div class="absolute top-4 left-4">
-                    <button data-target="exercise-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                    <button data-target="exercise-tools" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
@@ -105,14 +141,14 @@
                     <p class="text-gray-500 dark:text-gray-400 mt-2">Enter your time and distance.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
+                    <div class="flex flex-col text-center">
                         <label for="time-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Time</label>
                         <div class="relative">
                             <input type="number" id="time-input" min="1" placeholder="e.g., 30" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
                             <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">minutes</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="flex flex-col text-center">
                         <label for="distance-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Distance</label>
                         <div class="relative">
                             <input type="number" id="distance-input" min="1" placeholder="e.g., 10" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
@@ -131,7 +167,7 @@
         <div id="walking-calculator" class="screen">
             <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
                  <div class="absolute top-4 left-4">
-                    <button data-target="exercise-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                    <button data-target="exercise-tools" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
@@ -139,22 +175,19 @@
                     <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Walking</h1>
                     <p class="text-gray-500 dark:text-gray-400 mt-2">Choose how you want to calculate.</p>
                 </div>
-                <!-- Calculation Mode Toggle -->
                 <div class="mb-6 flex justify-center border border-gray-200 dark:border-gray-700 rounded-lg p-1 bg-gray-100 dark:bg-gray-700">
                     <button id="walk-mode-time" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium bg-white dark:bg-slate-800 text-brand dark:text-slate-300 shadow">By Time</button>
                     <button id="walk-mode-steps" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium text-gray-500 dark:text-gray-400">By Steps</button>
                 </div>
                 <div class="space-y-6 mb-6">
-                    <!-- Time Input (default visible) -->
-                    <div id="walking-time-container">
+                    <div id="walking-time-container" class="flex flex-col text-center">
                         <label for="walking-time-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Time</label>
                         <div class="relative">
                             <input type="number" id="walking-time-input" min="1" placeholder="e.g., 45" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
                             <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">minutes</span>
                         </div>
                     </div>
-                    <!-- Steps Input (hidden by default) -->
-                    <div id="walking-steps-container" class="hidden">
+                    <div id="walking-steps-container" class="hidden flex flex-col text-center">
                         <label for="walking-steps-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Steps</label>
                         <div class="relative">
                             <input type="number" id="walking-steps-input" min="0" placeholder="e.g., 5000" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
@@ -170,7 +203,149 @@
             </div>
         </div>
 
-        <!-- Global Elements -->
+        <!-- Maintenance Calculator Screen -->
+        <div id="maintenance-calculator" class="screen">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
+                <div class="absolute top-4 left-4">
+                    <button data-target="weight-tools" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-center mb-8 pt-8">
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Weight Maintenance</h1>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2">Find the calories to maintain your weight.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="md:col-span-2">
+                        <label class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Gender</label>
+                        <div class="flex justify-center border border-gray-700 rounded-lg p-1 bg-gray-700 max-w-xs mx-auto">
+                           <button id="maintenance-gender-male" class="gender-btn-maintenance flex-1 py-2 px-4 rounded-md text-sm font-medium">Male</button>
+                           <button id="maintenance-gender-female" class="gender-btn-maintenance flex-1 py-2 px-4 rounded-md text-sm font-medium">Female</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="maintenance-age" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Age</label>
+                        <input type="number" id="maintenance-age" placeholder="e.g., 30" class="maintenance-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                    </div>
+                    <div>
+                        <label for="maintenance-weight" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Weight</label>
+                        <div class="relative">
+                            <input type="number" id="maintenance-weight" placeholder="e.g., 70" class="maintenance-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">kg</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <div class="w-full md:w-1/2">
+                            <label for="maintenance-height" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Height</label>
+                            <div class="relative">
+                                <input type="number" id="maintenance-height" placeholder="e.g., 175" class="maintenance-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">cm</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="md:col-span-2">
+                        <label for="maintenance-lifestyle" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Lifestyle</label>
+                        <select id="maintenance-lifestyle" class="maintenance-input w-full py-2.5 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                            <option value="1.2">Sedentary</option>
+                            <option value="1.375">Lightly Active</option>
+                            <option value="1.55">Moderately Active</option>
+                            <option value="1.725">Very Active</option>
+                            <option value="1.9">Extra Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="maintenance-result-container" class="result-card bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center">
+                    <p class="text-lg font-medium text-slate-800 dark:text-slate-300">Daily Calories:</p>
+                    <p class="text-5xl font-bold text-brand dark:text-slate-300 mt-2"><span id="maintenance-calories">0</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Weight Goal Planner Screen -->
+        <div id="goal-planner" class="screen">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
+                 <div class="absolute top-4 left-4">
+                    <button data-target="weight-tools" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    </button>
+                 </div>
+                 <div class="text-center mb-8 pt-8">
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Target Weight</h1>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2">Find the calories to achieve your target weight.</p>
+                </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="md:col-span-2">
+                        <label class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Gender</label>
+                        <div class="flex justify-center border border-gray-700 rounded-lg p-1 bg-gray-700 max-w-xs mx-auto">
+                           <button id="goal-gender-male" class="gender-btn-goal flex-1 py-2 px-4 rounded-md text-sm font-medium">Male</button>
+                           <button id="goal-gender-female" class="gender-btn-goal flex-1 py-2 px-4 rounded-md text-sm font-medium">Female</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="goal-age" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Age</label>
+                        <input type="number" id="goal-age" placeholder="e.g., 30" class="goal-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                    </div>
+                    <div>
+                        <label for="goal-height" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Height</label>
+                        <div class="relative">
+                            <input type="number" id="goal-height" placeholder="e.g., 175" class="goal-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                             <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">cm</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="goal-current-weight" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Current Weight</label>
+                        <div class="relative">
+                            <input type="number" id="goal-current-weight" placeholder="e.g., 70" class="goal-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                             <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">kg</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="goal-target-weight" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Target Weight</label>
+                         <div class="relative">
+                            <input type="number" id="goal-target-weight" placeholder="e.g., 65" class="goal-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                             <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">kg</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="goal-lifestyle" class="block text-lg font-semibold text-center text-gray-700 dark:text-gray-300 mb-2">Lifestyle</label>
+                        <select id="goal-lifestyle" class="goal-input w-full py-2.5 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200">
+                            <option value="1.2">Sedentary</option>
+                            <option value="1.375">Lightly Active</option>
+                            <option value="1.55">Moderately Active</option>
+                            <option value="1.725">Very Active</option>
+                            <option value="1.9">Extra Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="goal-result-container" class="result-card bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center mb-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center items-center">
+                        <div>
+                            <p class="text-lg font-medium text-slate-800 dark:text-slate-300">Daily Calories:</p>
+                            <p class="text-4xl font-bold text-brand dark:text-slate-300"><span id="goal-calories">0</span></p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-medium text-slate-800 dark:text-slate-300">Time to Goal:</p>
+                            <p class="text-4xl font-bold text-brand dark:text-slate-300"><span id="goal-time">0</span></p>
+                            <p class="text-sm text-gray-400 dark:text-gray-500">weeks</p>
+                        </div>
+                    </div>
+                </div>
+                 <div id="custom-goal-container" class="result-card bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center">
+                     <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-4">Set Your Own Timeline</h2>
+                     <div class="space-y-4">
+                         <div class="relative w-full max-w-xs mx-auto">
+                            <input type="number" id="goal-custom-weeks" placeholder="e.g., 12" class="goal-input w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-200 text-center">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">weeks</span>
+                         </div>
+                         <div id="custom-goal-result-display" class="hidden mt-4">
+                            <h3 class="text-md font-semibold text-gray-700 dark:text-gray-300 mb-2">Daily Calories Until Goal Is Reached</h3>
+                            <p class="text-4xl font-bold text-brand dark:text-slate-300"><span id="custom-goal-calories">0</span></p>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+
         <footer class="text-center mt-8">
             <p class="text-gray-400 dark:text-gray-500 text-sm">Disclaimer: This is an estimate. Actual results may vary.</p>
         </footer>
@@ -180,7 +355,7 @@
         // --- Screen Navigation ---
         const screens = document.querySelectorAll('.screen');
         const navButtons = document.querySelectorAll('.nav-btn');
-        const startCountingBtn = document.getElementById('start-counting-btn');
+        const startBtn = document.getElementById('start-btn');
 
         function showScreen(screenId) {
             screens.forEach(screen => {
@@ -192,7 +367,7 @@
             }
         }
         
-        startCountingBtn.addEventListener('click', () => showScreen('exercise-selection'));
+        startBtn.addEventListener('click', () => showScreen('category-selection'));
         navButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetId = button.getAttribute('data-target');
@@ -257,7 +432,7 @@
         const walkModeStepsBtn = document.getElementById('walk-mode-steps');
         const walkingTimeContainer = document.getElementById('walking-time-container');
         const walkingStepsContainer = document.getElementById('walking-steps-container');
-        let currentWalkMode = 'time'; // 'time' or 'steps'
+        let currentWalkMode = 'time';
         function setWalkMode(mode) {
             currentWalkMode = mode;
             walkingTimeInput.value = '';
@@ -306,7 +481,168 @@
         }
         walkingTimeInput.addEventListener('input', calculateWalkingCalories);
         walkingStepsInput.addEventListener('input', calculateWalkingCalories);
+
+        // --- Maintenance and Goal Calculators ---
+        const maintenanceInputs = document.querySelectorAll('.maintenance-input');
+        const maintenanceResultContainer = document.getElementById('maintenance-result-container');
+        const maintenanceCaloriesEl = document.getElementById('maintenance-calories');
+        const goalInputs = document.querySelectorAll('.goal-input');
+        const goalResultContainer = document.getElementById('goal-result-container');
+        const goalCaloriesEl = document.getElementById('goal-calories');
+        const goalTimeEl = document.getElementById('goal-time');
+        const customGoalContainer = document.getElementById('custom-goal-container');
+        const customWeeksInput = document.getElementById('goal-custom-weeks');
+        const customGoalResultDisplay = document.getElementById('custom-goal-result-display');
+        const customGoalCaloriesEl = document.getElementById('custom-goal-calories');
+
+        let currentMaintenanceGender = 'male';
+        let currentGoalGender = 'male';
+
+        const maintenanceGenderMaleBtn = document.getElementById('maintenance-gender-male');
+        const maintenanceGenderFemaleBtn = document.getElementById('maintenance-gender-female');
+        const goalGenderMaleBtn = document.getElementById('goal-gender-male');
+        const goalGenderFemaleBtn = document.getElementById('goal-gender-female');
+
+        function setMaintenanceGender(gender) {
+            currentMaintenanceGender = gender;
+            updateMaintenanceCalculations();
+            if (gender === 'male') {
+                maintenanceGenderMaleBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                maintenanceGenderMaleBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
+                maintenanceGenderFemaleBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                maintenanceGenderFemaleBtn.classList.add('text-gray-500', 'dark:text-gray-400');
+            } else {
+                maintenanceGenderFemaleBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                maintenanceGenderFemaleBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
+                maintenanceGenderMaleBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                maintenanceGenderMaleBtn.classList.add('text-gray-500', 'dark:text-gray-400');
+            }
+        }
+
+        function setGoalGender(gender) {
+            currentGoalGender = gender;
+            updateGoalCalculations();
+            if (gender === 'male') {
+                goalGenderMaleBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                goalGenderMaleBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
+                goalGenderFemaleBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                goalGenderFemaleBtn.classList.add('text-gray-500', 'dark:text-gray-400');
+            } else {
+                goalGenderFemaleBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                goalGenderFemaleBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
+                goalGenderMaleBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
+                goalGenderMaleBtn.classList.add('text-gray-500', 'dark:text-gray-400');
+            }
+        }
+
+        maintenanceGenderMaleBtn.addEventListener('click', () => setMaintenanceGender('male'));
+        maintenanceGenderFemaleBtn.addEventListener('click', () => setMaintenanceGender('female'));
+        goalGenderMaleBtn.addEventListener('click', () => setGoalGender('male'));
+        goalGenderFemaleBtn.addEventListener('click', () => setGoalGender('female'));
+
+        function calculateTDEE(weight, height, age, gender, activityMultiplier) {
+            if (!weight || !height || !age || !gender || !activityMultiplier) return 0;
+            const bmr = (gender === 'male')
+                ? (10 * weight) + (6.25 * height) - (5 * age) + 5
+                : (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            return Math.round(bmr * activityMultiplier);
+        }
+
+        function updateMaintenanceCalculations() {
+            const gender = currentMaintenanceGender;
+            const age = parseFloat(document.getElementById('maintenance-age').value);
+            const weight = parseFloat(document.getElementById('maintenance-weight').value);
+            const height = parseFloat(document.getElementById('maintenance-height').value);
+            const lifestyle = parseFloat(document.getElementById('maintenance-lifestyle').value);
+
+            if (age && weight && height) {
+                maintenanceResultContainer.classList.add('show');
+                const tdee = calculateTDEE(weight, height, age, gender, lifestyle);
+                maintenanceCaloriesEl.textContent = tdee;
+            } else {
+                maintenanceResultContainer.classList.remove('show');
+                maintenanceCaloriesEl.textContent = '0';
+            }
+        }
+        
+        function updateCustomGoalCalculation() {
+             const gender = currentGoalGender;
+            const age = parseFloat(document.getElementById('goal-age').value);
+            const currentWeight = parseFloat(document.getElementById('goal-current-weight').value);
+            const height = parseFloat(document.getElementById('goal-height').value);
+            const lifestyle = parseFloat(document.getElementById('goal-lifestyle').value);
+            const targetWeight = parseFloat(document.getElementById('goal-target-weight').value);
+            const customWeeks = parseFloat(customWeeksInput.value);
+
+            const allPrimaryInputsFilled = age && currentWeight && height && targetWeight && currentWeight !== targetWeight;
+
+            if (allPrimaryInputsFilled && customWeeks > 0) {
+                const maintenanceCalories = calculateTDEE(currentWeight, height, age, gender, lifestyle);
+                const weightDiffKg = currentWeight - targetWeight;
+                const totalCaloriesToChange = weightDiffKg * 7700;
+                const totalDays = customWeeks * 7;
+                const dailyCalorieChange = Math.round(totalCaloriesToChange / totalDays);
+                
+                const customCalories = maintenanceCalories - dailyCalorieChange;
+                
+                customGoalCaloriesEl.textContent = customCalories;
+                customGoalResultDisplay.classList.remove('hidden');
+
+            } else {
+                customGoalResultDisplay.classList.add('hidden');
+                customGoalCaloriesEl.textContent = '0';
+            }
+        }
+
+        function updateGoalCalculations() {
+            const gender = currentGoalGender;
+            const age = parseFloat(document.getElementById('goal-age').value);
+            const currentWeight = parseFloat(document.getElementById('goal-current-weight').value);
+            const height = parseFloat(document.getElementById('goal-height').value);
+            const lifestyle = parseFloat(document.getElementById('goal-lifestyle').value);
+            const targetWeight = parseFloat(document.getElementById('goal-target-weight').value);
+
+            const allInputsFilled = age && currentWeight && height && targetWeight && currentWeight !== targetWeight;
+
+            if (allInputsFilled) {
+                goalResultContainer.classList.add('show');
+                customGoalContainer.classList.add('show');
+                const maintenanceCalories = calculateTDEE(currentWeight, height, age, gender, lifestyle);
+                const calorieDeficitOrSurplus = 500;
+                const weightDiffKg = Math.abs(currentWeight - targetWeight);
+                const totalCaloriesToChange = weightDiffKg * 7700;
+                const estimatedDays = Math.round(totalCaloriesToChange / calorieDeficitOrSurplus);
+                const estimatedWeeks = (estimatedDays / 7).toFixed(1);
+
+                let recommendedCalories = 0;
+                if (targetWeight < currentWeight) {
+                    recommendedCalories = maintenanceCalories - calorieDeficitOrSurplus;
+                } else {
+                    recommendedCalories = maintenanceCalories + calorieDeficitOrSurplus;
+                }
+                
+                goalCaloriesEl.textContent = recommendedCalories;
+                goalTimeEl.textContent = estimatedWeeks;
+                updateCustomGoalCalculation();
+            } else {
+                goalResultContainer.classList.remove('show');
+                customGoalContainer.classList.remove('show');
+                goalCaloriesEl.textContent = '0';
+                goalTimeEl.textContent = '0';
+                customWeeksInput.value = '';
+                updateCustomGoalCalculation();
+            }
+        }
+        
+        maintenanceInputs.forEach(input => input.addEventListener('input', updateMaintenanceCalculations));
+        goalInputs.forEach(input => input.addEventListener('input', updateGoalCalculations));
+        customWeeksInput.addEventListener('input', updateCustomGoalCalculation);
+        
+        // Set initial state for toggles
+        setMaintenanceGender('male');
+        setGoalGender('male');
     </script>
 </body>
 </html>
+
 
