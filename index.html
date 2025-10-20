@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Hub</title>
+    <title>Weight Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -60,39 +60,19 @@
                     <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
                 </div>
 
-                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Health Hub</h1>
-                <p class="text-gray-500 dark:text-gray-400 mt-4 mb-8">Ready to track your lifestyle?</p>
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Weight Calculator</h1>
+                <p class="text-gray-500 dark:text-gray-400 mt-4 mb-8">Ready to track your weight?</p>
                 <button id="start-btn" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
                     Start
                 </button>
             </div>
         </div>
 
-        <!-- Category Selection Screen -->
-        <div id="category-selection" class="screen">
-            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
-                 <div class="absolute top-4 left-4">
-                    <button data-target="main-menu" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                    </button>
-                 </div>
-                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 pt-8">Select a Category</h1>
-                 <div class="space-y-4">
-                     <button data-target="weight-tools" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
-                         Weight
-                     </button>
-                     <button data-target="exercise-tools" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
-                         Exercise
-                     </button>
-                 </div>
-            </div>
-        </div>
-        
         <!-- Weight Tools Screen -->
         <div id="weight-tools" class="screen">
             <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
                  <div class="absolute top-4 left-4">
-                    <button data-target="category-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
+                    <button data-target="main-menu" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                     </button>
                  </div>
@@ -105,101 +85,6 @@
                          Target Weight
                      </button>
                  </div>
-            </div>
-        </div>
-
-        <!-- Exercise Tools Screen -->
-        <div id="exercise-tools" class="screen">
-            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8 text-center">
-                 <div class="absolute top-4 left-4">
-                    <button data-target="category-selection" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                    </button>
-                 </div>
-                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 pt-8">Exercise Calculators</h1>
-                 <div class="space-y-4">
-                     <button data-target="walking-calculator" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
-                         Walking
-                     </button>
-                     <button data-target="bike-calculator" class="nav-btn w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-lg">
-                         Under Desk Bike
-                     </button>
-                 </div>
-            </div>
-        </div>
-
-        <!-- Under Desk Bike Calculator Screen -->
-        <div id="bike-calculator" class="screen">
-            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
-                 <div class="absolute top-4 left-4">
-                    <button data-target="exercise-tools" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                    </button>
-                 </div>
-                <div class="text-center mb-8 pt-8">
-                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Under Desk Bike</h1>
-                    <p class="text-gray-500 dark:text-gray-400 mt-2">Enter your time and distance.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div class="flex flex-col text-center">
-                        <label for="time-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Time</label>
-                        <div class="relative">
-                            <input type="number" id="time-input" min="1" placeholder="e.g., 30" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
-                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">minutes</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col text-center">
-                        <label for="distance-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Distance</label>
-                        <div class="relative">
-                            <input type="number" id="distance-input" min="1" placeholder="e.g., 10" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
-                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">km</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="bike-result-container" class="result-card bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center">
-                    <p class="text-lg font-medium text-slate-800 dark:text-slate-300">Estimated Calories Burned:</p>
-                    <p id="bike-calorie-result" class="text-5xl font-bold text-brand dark:text-slate-300 mt-2">0</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Walking Calculator Screen -->
-        <div id="walking-calculator" class="screen">
-            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:p-8">
-                 <div class="absolute top-4 left-4">
-                    <button data-target="exercise-tools" class="nav-btn bg-brand hover:bg-brand-dark text-white rounded-lg p-2.5 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                    </button>
-                 </div>
-                <div class="text-center mb-8 pt-8">
-                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-200">Walking</h1>
-                    <p class="text-gray-500 dark:text-gray-400 mt-2">Choose how you want to calculate.</p>
-                </div>
-                <div class="mb-6 flex justify-center border border-gray-200 dark:border-gray-700 rounded-lg p-1 bg-gray-100 dark:bg-gray-700">
-                    <button id="walk-mode-time" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium bg-white dark:bg-slate-800 text-brand dark:text-slate-300 shadow">By Time</button>
-                    <button id="walk-mode-steps" class="walk-mode-btn flex-1 py-2 px-4 rounded-md text-sm font-medium text-gray-500 dark:text-gray-400">By Steps</button>
-                </div>
-                <div class="space-y-6 mb-6">
-                    <div id="walking-time-container" class="flex flex-col text-center">
-                        <label for="walking-time-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Time</label>
-                        <div class="relative">
-                            <input type="number" id="walking-time-input" min="1" placeholder="e.g., 45" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
-                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">minutes</span>
-                        </div>
-                    </div>
-                    <div id="walking-steps-container" class="hidden flex flex-col text-center">
-                        <label for="walking-steps-input" class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Steps</label>
-                        <div class="relative">
-                            <input type="number" id="walking-steps-input" min="0" placeholder="e.g., 5000" class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white dark:focus:bg-gray-600">
-                             <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">steps</span>
-                        </div>
-                        <p class="text-xs text-center text-gray-400 dark:text-gray-500 mt-2">Assuming an average pace</p>
-                    </div>
-                </div>
-                <div id="walking-result-container" class="result-card bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center">
-                    <p class="text-lg font-medium text-slate-800 dark:text-slate-300">Estimated Calories Burned:</p>
-                    <p id="walking-calorie-result" class="text-5xl font-bold text-brand dark:text-slate-300 mt-2">0</p>
-                </div>
             </div>
         </div>
 
@@ -367,120 +252,13 @@
             }
         }
         
-        startBtn.addEventListener('click', () => showScreen('category-selection'));
+        startBtn.addEventListener('click', () => showScreen('weight-tools'));
         navButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetId = button.getAttribute('data-target');
                 showScreen(targetId);
             });
         });
-
-        // --- Bike Calculator ---
-        const cpmDataPoints = [
-            [5, 1.8], [8, 2.03], [10, 2.2], [12, 2.43], [15, 2.8], [16, 2.93],
-            [20, 3.53], [24, 4.07], [30, 4.9], [40, 6.27]
-        ];
-        const timeInput = document.getElementById('time-input');
-        const distanceInput = document.getElementById('distance-input');
-        const bikeCalorieResultEl = document.getElementById('bike-calorie-result');
-        const bikeResultContainer = document.getElementById('bike-result-container');
-
-        function getCpmForSpeed(speed) {
-            if (speed <= cpmDataPoints[0][0]) return cpmDataPoints[0][1];
-            if (speed >= cpmDataPoints[cpmDataPoints.length - 1][0]) return cpmDataPoints[cpmDataPoints.length - 1][1];
-            
-            let lowerBound, upperBound;
-            for (let i = 0; i < cpmDataPoints.length - 1; i++) {
-                if (speed >= cpmDataPoints[i][0] && speed <= cpmDataPoints[i + 1][0]) {
-                    lowerBound = cpmDataPoints[i];
-                    upperBound = cpmDataPoints[i + 1];
-                    break;
-                }
-            }
-            const [speed1, cpm1] = lowerBound;
-            const [speed2, cpm2] = upperBound;
-            const speedFraction = (speed - speed1) / (speed2 - speed1);
-            return cpm1 + (speedFraction * (cpm2 - cpm1));
-        }
-
-        function calculateBikeCalories() {
-            const time = parseFloat(timeInput.value);
-            const distance = parseFloat(distanceInput.value);
-            if (!time || !distance || time <= 0 || distance <= 0) {
-                bikeCalorieResultEl.textContent = '0';
-                bikeResultContainer.classList.remove('show');
-                return;
-            }
-            const speed = distance / (time / 60);
-            const cpm = getCpmForSpeed(speed);
-            const totalCalories = Math.round(cpm * time);
-            bikeCalorieResultEl.textContent = totalCalories;
-            if (!bikeResultContainer.classList.contains('show')) {
-                bikeResultContainer.classList.add('show');
-            }
-        }
-        
-        timeInput.addEventListener('input', calculateBikeCalories);
-        distanceInput.addEventListener('input', calculateBikeCalories);
-
-        // --- Walking Calculator ---
-        const walkingTimeInput = document.getElementById('walking-time-input');
-        const walkingStepsInput = document.getElementById('walking-steps-input');
-        const walkingCalorieResultEl = document.getElementById('walking-calorie-result');
-        const walkingResultContainer = document.getElementById('walking-result-container');
-        const walkModeTimeBtn = document.getElementById('walk-mode-time');
-        const walkModeStepsBtn = document.getElementById('walk-mode-steps');
-        const walkingTimeContainer = document.getElementById('walking-time-container');
-        const walkingStepsContainer = document.getElementById('walking-steps-container');
-        let currentWalkMode = 'time';
-        function setWalkMode(mode) {
-            currentWalkMode = mode;
-            walkingTimeInput.value = '';
-            walkingStepsInput.value = '';
-            calculateWalkingCalories();
-            if (mode === 'time') {
-                walkModeTimeBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
-                walkModeTimeBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
-                walkModeStepsBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
-                walkModeStepsBtn.classList.add('text-gray-500', 'dark:text-gray-400');
-                walkingTimeContainer.classList.remove('hidden');
-                walkingStepsContainer.classList.add('hidden');
-            } else {
-                walkModeStepsBtn.classList.add('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
-                walkModeStepsBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
-                walkModeTimeBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-brand', 'dark:text-slate-300', 'shadow');
-                walkModeTimeBtn.classList.add('text-gray-500', 'dark:text-gray-400');
-                walkingStepsContainer.classList.remove('hidden');
-                walkingTimeContainer.classList.add('hidden');
-            }
-        }
-        walkModeTimeBtn.addEventListener('click', () => setWalkMode('time'));
-        walkModeStepsBtn.addEventListener('click', () => setWalkMode('steps'));
-        function calculateWalkingCalories() {
-            let totalCalories = 0;
-            const walkingCpm = 3.7;
-            const stepsPerMinute = 100;
-            if (currentWalkMode === 'time') {
-                const time = parseFloat(walkingTimeInput.value);
-                if (time && time > 0) {
-                    totalCalories = Math.round(time * walkingCpm);
-                }
-            } else {
-                const steps = parseFloat(walkingStepsInput.value);
-                if (steps && steps > 0) {
-                    const estimatedTime = steps / stepsPerMinute;
-                    totalCalories = Math.round(estimatedTime * walkingCpm);
-                }
-            }
-            walkingCalorieResultEl.textContent = totalCalories;
-            if (totalCalories > 0) {
-                walkingResultContainer.classList.add('show');
-            } else {
-                walkingResultContainer.classList.remove('show');
-            }
-        }
-        walkingTimeInput.addEventListener('input', calculateWalkingCalories);
-        walkingStepsInput.addEventListener('input', calculateWalkingCalories);
 
         // --- Maintenance and Goal Calculators ---
         const maintenanceInputs = document.querySelectorAll('.maintenance-input');
@@ -644,5 +422,4 @@
     </script>
 </body>
 </html>
-
 
